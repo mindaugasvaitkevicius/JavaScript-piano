@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Piano project</title>
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<!--Header -->
+	<header>
+		<button type="button" class="popUpButton" data-toggle="modal" data-target="#exampleModal">
+  		How to play
+		</button>
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog" role="document">
+    			<div class="modal-content">
+      				<div class="modal-header">
+        				<h5 class="modal-title" id="exampleModalLabel">Controls</h5>
+        
+      				</div>
+      			<div class="modal-body">
+       				 <p>Use numpad keys 1-8 to play sounds and numpad keys 0 and 9 to switch between octaves</p>
+     		    </div>
+      				<div class="modal-footer">
+        				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     				</div>
+   				</div>
+ 		 	</div>
+		</div>
+	</header>
+	<!--Piano-->
+	<main>
+		<div class="piano">
+			<ul>
+				<li class="note1 note" id="note1" data-keyboard="97"><span class="number"><b>1</b></span></li>
+				<li class="note2 note" id="note2" data-keyboard="98"><span class="number"><b>2</b></span></li>
+				<li class="note3 note" id="note3" data-keyboard="99"><span class="number"><b>3</b></span></li>
+				<li class="note4 note" id="note4" data-keyboard="100"><span class="number"><b>4</b></span></li>
+				<li class="note5 note" id="note5" data-keyboard="101"><span class="number"><b>5</b></span></li>
+				<li class="note6 note" id="note6" data-keyboard="102"><span class="number"><b>6</b></span></li>
+				<li class="note7 note" id="note7" data-keyboard="103"><span class="number"><b>7</b></span></li>
+				<li class="note8 note" id="note8" data-keyboard="104"><span class="number"><b>8</b></span></li>
+			</ul>
+		</div>	
+	<!--Octave symobls-->
+	<div class="switchSymbols">
+		<ul>
+			<li class="note9" id="nine" data-keyboard="96" ><span class="octaveSymbols"><b>&lt;</b></span></li>
+			<li class="note10" id="ten" data-keyboard="105" ><span class="octaveSymbols"><b>></b></span></li>
+		</ul>
+	</div>
+	<!--Where the sound files are stored-->
+	</main>
+	<section id="audio_files">
+		<audio data-keyboard="a97"  src="audio/C3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a98"  src="audio/D3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a99"  src="audio/E3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a100" src="audio/F3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a101" src="audio/G3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a102" src="audio/A3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a103" src="audio/B3.ogg" preload="auto"></audio>
+		<audio data-keyboard="a104" src="audio/C4.ogg" preload="auto"></audio>
+
+		<audio data-keyboard="b97"  src="audio/C4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b98"  src="audio/D4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b99"  src="audio/E4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b100" src="audio/F4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b101" src="audio/G4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b102" src="audio/A4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b103" src="audio/B4.ogg" preload="auto"></audio>
+		<audio data-keyboard="b104" src="audio/C5.ogg" preload="auto"></audio>
+
+		<audio data-keyboard="c97"  src="audio/C5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c98"  src="audio/D5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c99"  src="audio/E5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c100" src="audio/F5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c101" src="audio/G5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c102" src="audio/A5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c103" src="audio/B5.ogg" preload="auto"></audio>
+		<audio data-keyboard="c104" src="audio/C6.ogg" preload="auto"></audio>
+	</section>
+	<!--Footer -->
+	<footer>
+		
+	</footer>
+	
+	<script src="JS/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
